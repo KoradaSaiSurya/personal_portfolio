@@ -4,7 +4,8 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #ffffff, #f1f1f1);
+ background: linear-gradient(to right, #fdfbfb, #ebedee);
+      
   box-sizing: border-box;
   overflow-x: hidden;
   color: #222;
@@ -16,10 +17,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 20px 90px;
   position: sticky;
   top: 0;
- background: linear-gradient(to right, #ffffff, #f1f1f1);
+ background: linear-gradient(to right, #ffffff, #f6f6f6);
   z-index: 999;
 }
 
@@ -33,7 +34,7 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 0px;
 }
 
 .nav-links li {
@@ -76,6 +77,51 @@ body {
 }
 
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #333;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
 
 
 
@@ -85,54 +131,74 @@ body {
 
 
 
-.myText{
+
+.myText {
   text-align: center;
   margin-top: 30px;
 }
-.saisurya{
+
+.saisurya {
   font-size: 30px;
 }
-.frontend{
+
+.frontend {
   font-size: 23px;
   margin-top: -15px;
   font-weight: bold;
   color: grey;
 }
 
-.hello{
+.hello {
   margin-bottom: -15px;
   color: grey;
   font-size: 12px;
   font-weight: bold;
 }
 
-.resume , .contact-info {
-    text-decoration: none;
+.resume,
+.contact-info {
+  text-decoration: none;
   color: black;
   background-color: none;
   margin: 6px;
   border-radius: 20px;
   border: 1px solid black;
-  padding: 10px;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding: 10px 18px;
   font-size: 11px;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  color:black;
 }
 
-.contact-info:hover {
+.contact-info:hover,
+.resume:hover {
   background-color: black;
   color: white;
 }
 
-.resume:hover{
-    background-color: black;
-  color: white;
+
+@media (max-width: 768px) {
+  .saisurya {
+    font-size: 22px;
+  }
+
+  .frontend {
+    font-size: 18px;
+    margin-top: -10px;
+  }
+
+  .hello {
+    font-size: 10px;
+    margin-bottom: -10px;
+  }
+
+  .resume,
+  .contact-info {
+    font-size: 10px;
+    padding: 8px 14px;
+  }
 }
 
 
@@ -140,18 +206,15 @@ body {
 
 
 
-
-
-.contact-box{
+.contact-box {
   justify-content: center;
   align-items: center;
   display: flex;
-
+  padding: 10px;
 }
 
 .modal {
   padding: 30px 40px;
-  border-radius: 12px;
   background-color: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 350px;
@@ -159,17 +222,30 @@ body {
   align-items: center;
   border: 1px solid black;
   border-radius: 10px;
+  font-size: 16px;
 }
 
 .contact-text {
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0 30px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 
+@media (max-width: 768px) {
+  .modal {
+    width: 90%; 
+    padding: 20px;
+    font-size: 14px;
+  }
 
+  .contact-text {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
 
 
 
@@ -193,24 +269,51 @@ body {
   font-size: 20px;
   color: #333;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.home-icons a:hover{
+.home-icons a:hover {
   transform: scale(1.1);
 }
 
-
-
-.homeImgText{
+.homeImgText {
   display: flex;
   justify-content: center;
-  gap:50px;
+  gap: 50px;
   margin: 180px;
+  align-items: center;
 }
 
-.suryaImg{
+.suryaImg {
   height: 280px;
   border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+  .homeImgText {
+    flex-direction: column;
+    margin: 60px 10px;
+    gap: 20px;
+  }
+
+  .suryaImg {
+    height: 200px;
+  }
+
+  .modal {
+    width: 90%;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .modal p {
+    font-size: 14px;
+  }
+
+  .home-icons a {
+    font-size: 18px;
+  }
 }
 
 
@@ -303,6 +406,55 @@ body {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 768px) {
+  .browse {
+    font-size: 12px;
+    margin-top: 40px;
+  }
+
+  .projects {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .img-text {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .surya-Img-About {
+    width: 90%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 16px;
+  }
+
+  .cards-text {
+    width: 90%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .experience-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .experience {
+    width: 90%;
+    min-width: auto;
+  }
+
+  .about-paragraph {
+    font-size: 14px;
+    text-align: justify;
+    padding: 15px;
+  }
+}
+
 
 
 
@@ -359,7 +511,7 @@ body {
 
 .surya-img-in-project{
   border-radius: 20px;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
 
   
@@ -395,8 +547,61 @@ body {
 
 .project-Card h3{
   font-size: 20px;
+  margin-bottom: 30px;
 } 
 
+@media (max-width: 768px) {
+  .browse {
+    font-size: 10px;
+    margin-top: 100px;
+    margin-bottom: -60px;
+  }
+
+  .projects {
+    font-size: 24px;
+    margin-top: 60px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 0;
+    margin: 50px;
+  }
+
+  .project-Card {
+    width: 90%;
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  .surya-img-in-project {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 40px;
+  }
+
+  .Gitlive {
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .git {
+    font-size: 12px;
+    padding: 8px 15px;
+    text-align: center;
+  }
+
+  .project-Card h3 {
+    font-size: 18px;
+  }
+}
 
 
 
@@ -484,6 +689,51 @@ body {
 }
 
 
+@media (max-width: 768px) {
+  .skills-container {
+    margin-top: 60px;
+    padding: 10px;
+  }
+
+  .browse {
+    font-size: 12px;
+  }
+
+  .projects {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .skill-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .skill-box, .skills-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .skill-box h3, .skills-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .proffesional {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .skill {
+    font-size: 14px;
+  }
+
+  .tick {
+    height: 14px;
+  }
+}
 
 
 
@@ -542,13 +792,42 @@ body {
   color: #000;
 }
 
+@media (max-width: 768px) {
+  .contacts-surya {
+    margin: 50px auto;
+    padding: 20px 10px;
+  }
+
+  .contact-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .contact-details p,
+  .contact-details a {
+    font-size: 16px;
+    justify-content: flex-start;
+  }
+}
 
 
 
 
 
 
-
+.footer-container{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset;
+    background-color: rgba(42, 36, 36, 0.808);
+    margin-bottom: -50px;
+  
+}
 
 .footer{
   list-style: none;
@@ -559,11 +838,10 @@ body {
   padding-top: 50px;
   padding-bottom: 100px;
  background: none;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset;
 }
 
 .footer-link{
-  color:black;
+    color: white;
   text-decoration: none;
   cursor: pointer;  
   align-items: center;
@@ -582,282 +860,58 @@ li{
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-bottom: 50px;
+  position: relative;
+  top: -20px;
+    color: white;
 }
 
+@media (max-width: 768px) {
 
-
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  .unorderList {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .name {
-    font-size: 20px;
-    padding-left: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    padding-right: 0;
-  }
-
-  .nav-links li {
-    margin-right: 0;
-    justify-content: flex-start;
-  }
-
-  .homeImgText,
-  .img-text,
-  .skill-container {
-    flex-direction: column;
-    gap: 30px;
-    margin: 20px;
-  }
-  .suryaImgDiv{
+  .footer-container{
     justify-content: center;
     align-items: center;
     display: flex;
-  }
-  .suryaImg{
-    height: 190px;
-  }
-  .myText{
-    margin-top: 0px;
-    margin-bottom: 50px;
-    justify-content: center;
-    align-items: center;
-  }
-  .experience-cards{
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -40px;
-
+    background-color: rgba(42, 36, 36, 0.808);
   }
-  .experience{
-    width: 270px;
-  }
-  .about-paragrah{
-    font-size: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-  .container-box{
-    margin-top: -90px;
-  }
-
-  
-.skill{
-  
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-  align-items: center;
-}
-
-.tick{
-  height: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.proffesional{
-  justify-content: center;
-  display: flex;
-  gap: 50px;  
-  margin: 20px;
-  margin-bottom: 0px;
-}
-
-.skill-box{
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 10px;
-   max-width: 270px;
-   margin: 20px;
-   padding: 20px;
-   padding-top: 20px;
-   padding-bottom: 20px;
-   gap: 10px;
-}
-.skills-box{
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 10px;
-   max-width: 246px;
-   margin: 20px;
-   padding: 20px;
-   padding-top: 20px;
-   padding-bottom: 20px;
-   gap: 10px;
-}
-
-.htmljs{
-  justify-content: center;
-  align-items: center;
-  text-align: center; 
-  font-size: 13px;
-  
-}
-.skill-container{
-  justify-content: center;
-  align-items: center;
-  text-align: center; 
-  display: flex;
-}
-
-  .surya-Img-About{
-    height: 270px;
-  }
-  .surya-img-in-project,
-  .surya-Img-skills {
-    max-width: 100%;
-    height:auto;
-  }
-
-
-  .project-Card {
-    width: 230px;
-    margin: 20px auto;
-  }
-
-
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
- 
-  .contacts-surya {
-  flex-direction: column;
-  align-items: center;
-  margin: 0px;
-  margin-top: 90px;
-  margin-bottom: 100px;
-}
-
-
-.contact-details{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid black;
-  border-radius: 10px;
-  align-items: center;
-  gap: 20px;
-  width: 260px;
-  padding: 10px;
-}
-.contact-details p,
-.contact-details a {
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-}
-
-  
-
   .footer {
     flex-direction: column;
-    gap: 10px;
-    padding: 20px 0;
-    font-size: 12px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
-  .footer li {
-    margin: 10px 0;
-  }
-  .copyright{
-    font-size: 10px;
-  }
-
-  .saisurya {
-    font-size: 20px;
+  li {
+    margin-right: 0;
+    margin-bottom: 15px;
+    flex-direction: column;
+    text-align: center;
+    
   }
 
-  .frontend {
-    font-size: 15px;
+  .footer-link {
+    font-size: 16px;
+    color: white;
   }
 
-  .hello {
-    font-size: 9px;
+  .copyright {
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 0 10px;
+    text-align: center;
+    flex-wrap: wrap;
+    
   }
-
-  .resume , .contact-info {
-  margin: 2px;
-  border-radius: 20px;
-  border: 1px solid black;
-  padding: 8px;
-  font-size: 9px;
-  font-weight: bold;
-  justify-content: center;
 }
 
-.home-icons a{
-  font-size: 17px;
-}
-.home-icons{
-  margin-top: 15px;
-}
-.browse {
-  font-size: 9px;
 
-}
-.projects{
-  font-size: 26px;
-}
-.project-Card h3{
-  font-size: 17px;
-}
-.contact-text{
-  font-size: 20px;
-}
-.git{
-  color: grey;
-  padding: 7px;
-}
-.modal p{
-  font-size: 10px;
-  justify-content: center;
-  align-items: center;
-}
 
-.modal{
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  background-color: none;
 
-}
-.contact-box{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  background-color: none;
-}
 
-}
+
+
 
 
 

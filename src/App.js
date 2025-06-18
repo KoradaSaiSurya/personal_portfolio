@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter , Routes, Route } from "react-router-dom";
 import Home from './Home';
-import Projects from './components/Projects'; // this is important
-import About from './About'; // this is important
+import Projects from './components/Projects'; 
+import About from './About';
 import Skills from './components/Skills';
 import Navbar from './components/Navbar';
 import Contact from './components/Contact';
@@ -10,7 +10,7 @@ import ContactInfo from './components/ContactInfo';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
      <Navbar />
       <Routes>
        
@@ -23,7 +23,7 @@ const App = () => {
 
       </Routes>
       
-    </BrowserRouter>
+  </HashRouter>
   );
 };
 
