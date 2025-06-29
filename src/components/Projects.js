@@ -12,8 +12,8 @@ const Projects = () => {
          <img className='surya-img-in-project' src='portfoliopic.png' alt='suryaImg'/>
          <h3> PortPolio </h3> 
          <div className='Gitlive'> 
-           <a className='git' href='https://github.com/KoradaSaiSurya/personal-portfolio.git'>  GitHub  </a>
-           <a className='git'  href="personal-portfolio-kappa-nine-39.vercel.app"> Live Demo </a>
+           <a className='git' href='https://github.com/KoradaSaiSurya/personal_portfolio.git'>  GitHub  </a>
+           <a className='git'  href="https://personal-portfolio-wady.vercel.app/"> Live Demo </a>
          </div>
       </div>
 
