@@ -1,56 +1,42 @@
-import React from 'react'
+import React from 'react';
+import { FaHtml5, FaJsSquare, FaGithub, FaCss3Alt, FaReact, FaCode, FaPaintBrush, FaVideo, FaMobileAlt, FaLightbulb, FaComments } from 'react-icons/fa';
 
 const Skills = () => {
   return (
-<div className='skills-container'>
-    <p className='browse'> Explore My </p>
-    <h2 className='projects'>  skills  </h2>
+    <div className='skills-section'>
+      <p className='browse'>Explore My</p>
+      <h2 className='projects'>Skills</h2>
 
-<div className='skill-container'>
-       
-    <div className='skill-box'>
-       <h3> Professional </h3>
+      <div className='skills-grid'>
 
-         <div className='proffesional'> 
-
-          <div className='htmljs'> 
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> HTML </p> </div>
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> JavaScript </p> </div>
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> GitHub </p> </div>
-          </div>
-          
-          <div className='htmljs'> 
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> CSS </p> </div>
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> React </p> </div>
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> VS Code </p> </div>
-          </div>
-
-        </div>
-    </div>
-
-    <div className='skills-box'>
-       <h3> Additional  </h3>
-
-         <div className='proffesional'> 
-
-          <div className='htmljs'> 
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> Canva </p> </div>
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> Video editing </p> </div>
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> Capcut </p> </div>
-
-          </div>
-          
-          <div className='htmljs'> 
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> Design Thinking </p> </div>
-            <div className='skill'> <img className='tick' src='tick.png' alt='tick'/> <p> Commmunication  </p> </div>
+        {/* Professional Skills */}
+        <div className='skill-card'>
+          <h3>Professional</h3>
+          <div className='skill-list'>
+            <div className='skill-item'><FaHtml5 /> HTML</div>
+            <div className='skill-item'><FaJsSquare /> JavaScript</div>
+            <div className='skill-item'><FaGithub /> GitHub</div>
+            <div className='skill-item'><FaCss3Alt /> CSS</div>
+            <div className='skill-item'><FaReact /> React</div>
+            <div className='skill-item'><FaCode /> VS Code</div>
           </div>
         </div>
-    </div>
 
-</div>
-</div>
-    
-  )
-}
+        {/* Additional Skills */}
+        <div className='skill-card'>
+          <h3>Additional</h3>
+          <div className='skill-list'>
+            <div className='skill-item'><FaPaintBrush /> Canva</div>
+            <div className='skill-item'><FaVideo /> Video Editing</div>
+            <div className='skill-item'><FaMobileAlt /> Capcut</div>
+            <div className='skill-item'><FaLightbulb /> Design Thinking</div>
+            <div className='skill-item'><FaComments /> Communication</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
 
 export default Skills;

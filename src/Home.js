@@ -1,44 +1,60 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-// import Navbar from './components/Navbar'
-import About from './About'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
-import { FaGithub ,FaLinkedin} from "react-icons/fa";
-import Footer from './components/Footer'
-
+import About from './About';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const Home = () => {
   return (
-    <div>
-     <div className='homeImgText'> 
-
-      <div className='suryaImgDiv '> <img className='suryaImg' src='suryaImg.jpg' alt='suryaImg'/> <br/> </div>
-       <div className='myText'> 
-       <p className='hello'> Hello I'm</p>
-       <h2 className='saisurya'> Sai Surya </h2>
-        <p className='frontend'>  Frontend Developer </p>
-
-
-        <a className='resume' href='Frontend_Resume.pdf' download>  Download CV </a>
-         <Link className='contact-info' to="/contactInfo"> <span > Contact Info </span></Link>
-
-
+    <div className="overall">
+      
+      {/* ===== Hero Section ===== */}
+      <div className="homeImgText">
         
-        <div className='home-icons'>
-        <a href='https://github.com/KoradaSaiSurya'>  <FaGithub /> </a>
-        <a href='https://linkedin.com/in/sai-surya-korada'>  <FaLinkedin /> </a>
+        {/* Profile Image */}
+        <div className="suryaImgDiv">
+          <img className="suryaImg" src="suryaImg.jpg" alt="Sai Surya" />
         </div>
-       </div>
-      </div>
-       <About />
-       <Skills />
-       <Projects />
-       <Contact />
-       <Footer />
-    </div>
-  )
-}
 
-export default Home
+        {/* Text Content */}
+        <div className="myText">
+          <p className="hello"> Hello, I'm</p>
+          <h2 className="saisurya">Sai Surya</h2>
+          <p className="frontend">Frontend Developer</p>
+
+          {/* Buttons */}
+          <div className="btn-group">
+            <a className="resume" href="sai_surya_resume.pdf" download>
+               Download CV
+            </a>
+            <Link className="contact-info" to="/contactInfo">
+               Contact Info
+            </Link>
+          </div>
+
+          {/* Social Links */}
+          <div className="home-icons">
+            <a href="https://github.com/KoradaSaiSurya" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
+            <a href="https://linkedin.com/in/sai-surya-korada"  target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* ===== Other Sections ===== */}
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;
