@@ -75,6 +75,14 @@ const projectsData = [
     github: 'https://github.com/KoradaSaiSurya/expense-tracker.git',
     live: 'https://expense-tracker-dun-two.vercel.app',
     tags: ['LocalStorage', 'React', 'CRUD']
+  },
+  {
+    id: 4,
+    title: 'Interior Design',
+    img: 'interior.webp',
+    github: 'https://github.com/KoradaSaiSurya/interiors',
+    live: 'https://interiors-iota.vercel.app',
+    tags: ['LocalStorage', 'React', 'CRUD']
   }
 ];
 
