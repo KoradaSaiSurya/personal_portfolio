@@ -57,7 +57,7 @@ const projectsData = [
     title: 'Portfolio',
     img: 'portfoliopic.png',
     github: 'https://github.com/KoradaSaiSurya/personal-portfolio.git',
-    live: 'https://personal-portfolio-kappa-nine-39.vercel.app',
+    live: 'https://personal-portfolio-wady.vercel.app',
     tags: ['React', 'Responsive', 'Vercel']
   },
   {
