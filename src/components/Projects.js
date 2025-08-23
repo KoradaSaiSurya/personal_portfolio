@@ -54,6 +54,14 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const projectsData = [
   {
     id: 1,
+    title: 'Gayathri School',
+    img: 'school-3d.png',
+    github: 'https://github.com/KoradaSaiSurya/gayatri-website',
+    live: 'https://gayatri-website.vercel.app',
+    tags: ['LocalStorage', 'React', 'CRUD']
+  },
+  {
+    id: 2,
     title: 'Portfolio',
     img: 'portfoliopic.png',
     github: 'https://github.com/KoradaSaiSurya/personal-portfolio.git',
@@ -61,7 +69,7 @@ const projectsData = [
     tags: ['React', 'Responsive', 'Vercel']
   },
   {
-    id: 2,
+    id: 3,
     title: 'Weather App',
     img: 'weatherapp.png',
     github: 'https://github.com/KoradaSaiSurya/search-weather.git',
@@ -69,7 +77,7 @@ const projectsData = [
     tags: ['API', 'OpenWeather', 'JS']
   },
   {
-    id: 3,
+    id: 4,
     title: 'Expense Tracker',
     img: 'expense.png',
     github: 'https://github.com/KoradaSaiSurya/expense-tracker.git',
@@ -77,13 +85,14 @@ const projectsData = [
     tags: ['LocalStorage', 'React', 'CRUD']
   },
   {
-    id: 4,
+    id: 5,
     title: 'Interior Design',
     img: 'interior.webp',
     github: 'https://github.com/KoradaSaiSurya/interiors',
     live: 'https://interiors-iota.vercel.app',
     tags: ['LocalStorage', 'React', 'CRUD']
   }
+  
 ];
 
 const Projects = () => {
