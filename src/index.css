@@ -22,7 +22,7 @@
   position: fixed;
   top: 20px;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1350px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
