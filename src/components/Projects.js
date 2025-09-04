@@ -62,6 +62,14 @@ const projectsData = [
   },
   {
     id: 2,
+    title: 'Interior Design',
+    img: 'interior.webp',
+    github: 'https://github.com/KoradaSaiSurya/luxeSpaces.git',
+    live: 'https://luxe-spaces.vercel.app/',
+    tags: ['LocalStorage', 'React', 'CRUD']
+  },
+  {
+    id: 3,
     title: 'Portfolio',
     img: 'portfoliopic.png',
     github: 'https://github.com/KoradaSaiSurya/personal-portfolio.git',
@@ -69,7 +77,7 @@ const projectsData = [
     tags: ['React', 'Responsive', 'Vercel']
   },
   {
-    id: 3,
+    id: 4,
     title: 'Weather App',
     img: 'weatherapp.png',
     github: 'https://github.com/KoradaSaiSurya/search-weather.git',
@@ -77,21 +85,14 @@ const projectsData = [
     tags: ['API', 'OpenWeather', 'JS']
   },
   {
-    id: 4,
+    id: 5,
     title: 'Expense Tracker',
     img: 'expense.png',
     github: 'https://github.com/KoradaSaiSurya/expense-tracker.git',
     live: 'https://expense-tracker-dun-two.vercel.app',
     tags: ['LocalStorage', 'React', 'CRUD']
-  },
-  {
-    id: 5,
-    title: 'Interior Design',
-    img: 'interior.webp',
-    github: 'https://github.com/KoradaSaiSurya/interiors',
-    live: 'https://interiors-iota.vercel.app',
-    tags: ['LocalStorage', 'React', 'CRUD']
   }
+  
   
 ];
 
