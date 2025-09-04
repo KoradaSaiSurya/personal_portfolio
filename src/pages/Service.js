@@ -21,7 +21,9 @@ const Service = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", formData);
+      const res = await axios.post("https://portfolio-backend-qsgb.onrender.com/api/contact", formData);
+
+
       setPopup({ show: true, type: "success", message: res.data.message });
       setFormData({ name: "", email: "", phone: "", websiteType: "", message: "" });
     } catch (err) {
