@@ -73,7 +73,8 @@ const Service = () => {
             <textarea name="message" rows="4" value={formData.message} onChange={handleInputChange} required></textarea>
           </div>
 
-          <button type="submit" className="book-btn">📩 Book Now</button>
+          <button type="submit" className="service-book-btn">📩 Book Now</button>
+
         </form>
       </div>
     </section>

@@ -1386,7 +1386,7 @@ button.book-btn {
 }
 
 /* Button */
-.book-btn {
+.service-book-btn {
   width: 100%;
   padding: 12px;
   background: linear-gradient(90deg, #007bff, #00c6ff);
@@ -1399,7 +1399,7 @@ button.book-btn {
   transition: 0.3s;
 }
 
-.book-btn:hover {
+.service-book-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
 }
@@ -1453,7 +1453,7 @@ button.book-btn {
     font-size: 22px;
   }
 
-  .book-btn {
+  .service-book-btn {
     font-size: 14px;
     padding: 10px;
   }
