@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaPhoneAlt, FaUser, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -8,20 +8,13 @@ const Contact = () => {
       <h2 className='contact-title'>Contact Me</h2>
 
       <div className='contact-card'>
-        
-        <div className='contact-item'>
-          <FaEnvelope className='contact-icon' />
-          <a href="mailto:koradasaisurya2003@gmail.com">
-            koradasaisurya2003@gmail.com
-          </a>
+
+         <div className='contact-item'>
+          <FaUser className='contact-icon' />
+         <a><strong>  Korada Sai Surya</strong> </a>
         </div>
 
-        <div className='contact-item'>
-          <FaPhoneAlt className='contact-icon' />
-          <a href="tel:+919000000000">+91 90000 00000</a>
-        </div>
-
-        <div className='contact-item'>
+         <div className='contact-item'>
           <FaLinkedin className='contact-icon' />
           <a 
             href='https://linkedin.com/in/sai-surya-korada' 
@@ -32,9 +25,36 @@ const Contact = () => {
           </a>
         </div>
 
+        <div className='contact-item'>
+          <FaPhoneAlt className='contact-icon' />
+          <a>+91 90144 81050</a>
+        </div>
+
+
+        
+        <div className='contact-item'>
+          <FaEnvelope className='contact-icon' />
+          <a href="mailto:koradasaisurya2003@gmail.com">
+            koradasaisurya2003@gmail.com
+          </a>
+        </div>
+
+        
+       
+        <div className='contact-item'>
+          <FaMapMarkerAlt className='contact-icon' />
+         <a>Tuni, Andhra Pradesh </a>
+        </div>
+
+
+       
+
+         
+       
+
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default Contact

@@ -1,84 +1,61 @@
-// src/pages/Service.js
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+import { FaCalendarCheck } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const Service = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    websiteType: "", // 👈 same name as backend
-    message: "",
-  });
+const servicesList = [
+  { title: "School / College Websites", desc: "Admissions info, timetable, notices, results.", img: "school-3d.png" },
+  { title: "Interior Design Website", desc: "Portfolio showcase, enquiry form.", img: "interior.webp" },
+  { title: "E-Commerce Web App", desc: "Shopping cart, product pages, payments UI.", img: "cart1.webp" },
+  { title: "Restaurant / Food Delivery", desc: "Menu, online booking, order tracking.", img: "Restaurant.webp" },
+  { title: "Real Estate Website", desc: "Property listings, search filters, contact builder.", img: "real-estate.webp" },
+  { title: "Hospital / Clinic Website", desc: "Doctor profiles, patient info.", img: "hospital.webp" },
+  { title: "Blog / News Web App", desc: "Categories, comments, search, likes.", img: "blog.webp" },
+  { title: "Event Management Website", desc: "Upcoming events, ticket booking, gallery.", img: "event.webp" },
+  { title: "Portfolio Websites", desc: "For professionals like doctors, teachers, artists.", img: "portfoliopic.png" },
+  { title: "Travel / Tourism Website", desc: "Tour packages, booking forms, gallery.", img: "travel.webp" },
+  { title: "Fitness / Gym Website", desc: "Trainer profiles, class schedules.", img: "gym.webp" },
+  { title: "Online Learning Platform", desc: "Courses, enroll, track progress.", img: "online.webp" }
+];
 
-  const [popup, setPopup] = useState({ show: false, type: "", message: "" });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post("https://portfolio-backend-qsgb.onrender.com/api/contact", formData);
-
-
-      setPopup({ show: true, type: "success", message: res.data.message });
-      setFormData({ name: "", email: "", phone: "", websiteType: "", message: "" });
-    } catch (err) {
-      setPopup({ show: true, type: "error", message: "❌ Booking Failed. Try again!" });
-    }
-    setTimeout(() => setPopup({ show: false, type: "", message: "" }), 3000);
-  };
-
+const Services = () => {
   return (
-    <section className="service-page">
-      <div className="container">
-        <h2>Book Your Service</h2>
-        <p>Fill out the form below and we will contact you shortly.</p>
+    <div className="services-container">
+      <h1 className="services-title">My Services</h1>
+      <p className="services-subtitle">
+        I build professional, responsive websites & web apps for various industries.
+      </p>
 
-        {popup.show && <div className={`popup ${popup.type}`}>{popup.message}</div>}
-
-        <form onSubmit={handleSubmit} className="service-form">
-          <div className="form-group">
-            <label>Full Name</label>
-            <input type="text" name="name" value={formData.name} onChange={handleInputChange} required />
+      <div className="services-grid">
+        {servicesList.map((service, index) => (
+          <div className="service-card" key={index}>
+            <div className="service-left">
+              <img src={service.img} alt={service.title} className="service-img" />
+            </div>
+            <div className="service-right">
+              <h2>{service.title}</h2>
+              <p>{service.desc}</p>
+              {/* Book Now Button */}
+              <button className="book-service">
+                <Link to="/book">
+                  <FaCalendarCheck /> <span>Book Now</span>
+                </Link>
+              </button>
+            </div>
           </div>
-
-          <div className="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
-          </div>
-
-          <div className="form-group">
-            <label>Mobile Number</label>
-            <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required />
-          </div>
-
-          <div className="form-group">
-            <label>Type of Website</label>
-            <select name="websiteType" value={formData.websiteType} onChange={handleInputChange} required>
-              <option value="">-- Select --</option>
-              <option value="Business">Business Website</option>
-              <option value="E-commerce">E-commerce Website</option>
-              <option value="Portfolio">Portfolio</option>
-              <option value="school">School/College</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div className="form-group">
-            <label>Message</label>
-            <textarea name="message" rows="4" value={formData.message} onChange={handleInputChange} required></textarea>
-          </div>
-
-          <button type="submit" className="service-book-btn">📩 Book Now</button>
-
-        </form>
+        ))}
       </div>
-    </section>
+
+      <div className="service-matter">
+        <h4 className="matter">Etc... Other Websites also </h4>
+        <p className="matter-text">
+          Apart from interior design, portfolio websites, school websites, 
+          and restaurant websites, I also provide custom web solutions tailored
+          to your needs. Whether it’s a personal project or a business site, 
+          I ensure it looks attractive, works smoothly, and is fully responsive on mobiles, tablets, and desktops.
+        </p>
+      </div>
+    </div>
   );
 };
 
-export default Service;
+export default Services;
