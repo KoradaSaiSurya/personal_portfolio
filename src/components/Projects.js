@@ -8,7 +8,7 @@ const projectsData = [
     img: 'school-3d.png',
     github: 'https://github.com/KoradaSaiSurya/gayatri-website',
     live: 'https://gayatri-website.vercel.app',
-    tags: ['LocalStorage', 'React', 'CRUD']
+    tags: ['LocalStorage', 'React', 'CRUD ']
   },
   {
     id: 2,
@@ -28,6 +28,15 @@ const projectsData = [
   },
   {
     id: 4,
+    title: '4 In One',
+    img: '4in1-3.png',
+    github: 'https://github.com/KoradaSaiSurya/Bharathone.git', 
+    // github: 'https://github.com/KoradaSaiSurya/Bharathone-backend.git',
+    live: 'https://bharathone.vercel.app',
+    tags: ['React', 'Responsive', 'Vercel']
+  },
+  {
+    id: 5,
     title: 'Weather App',
     img: 'weatherapp.png',
     github: 'https://github.com/KoradaSaiSurya/search-weather.git',
@@ -35,7 +44,7 @@ const projectsData = [
     tags: ['API', 'OpenWeather', 'JS']
   },
   {
-    id: 5,
+    id: 6,
     title: 'Expense Tracker',
     img: 'expense.png',
     github: 'https://github.com/KoradaSaiSurya/expense-tracker.git',
