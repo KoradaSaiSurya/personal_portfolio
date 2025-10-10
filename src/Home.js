@@ -28,7 +28,7 @@ const Home = () => {
 
           {/* Buttons */}
           <div className="btn-group">
-            <a className="resume" href="sai surya resume.pdf" download>
+            <a className="resume" href="Sai_Surya_Korada_Frontend_Developer_Resume.pdf.pdf" download>
                Download CV
             </a>
             <Link className="contact-info" to="/book">

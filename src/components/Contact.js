@@ -11,7 +11,7 @@ const Contact = () => {
 
          <div className='contact-item'>
           <FaUser className='contact-icon' />
-         <a><strong>  Korada Sai Surya</strong> </a>
+         <strong>  Korada Sai Surya</strong> 
         </div>
 
          <div className='contact-item'>
@@ -27,7 +27,7 @@ const Contact = () => {
 
         <div className='contact-item'>
           <FaPhoneAlt className='contact-icon' />
-          <a>+91 90144 81050</a>
+          +91 90144 81050
         </div>
 
 
@@ -43,7 +43,7 @@ const Contact = () => {
        
         <div className='contact-item'>
           <FaMapMarkerAlt className='contact-icon' />
-         <a>Tuni, Andhra Pradesh </a>
+         Tuni, Andhra Pradesh 
         </div>
 
 

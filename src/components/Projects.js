@@ -10,13 +10,14 @@ const projectsData = [
     live: 'https://gayatri-website.vercel.app',
     tags: ['LocalStorage', 'React', 'CRUD ']
   },
-  {
+   {
     id: 2,
-    title: 'Interior Design',
-    img: 'interior.webp',
-    github: 'https://github.com/KoradaSaiSurya/luxeSpaces.git',
-    live: 'https://luxe-spaces.vercel.app/',
-    tags: ['LocalStorage', 'React', 'CRUD']
+    title: '4 In One',
+    img: '4in1-3.png',
+    github: 'https://github.com/KoradaSaiSurya/Bharathone.git', 
+    // github: 'https://github.com/KoradaSaiSurya/Bharathone-backend.git',
+    live: 'https://bharathone.vercel.app',
+    tags: ['React', 'Responsive', 'Vercel']
   },
   {
     id: 3,
@@ -26,14 +27,14 @@ const projectsData = [
     live: 'https://personal-portfolio-wady.vercel.app',
     tags: ['React', 'Responsive', 'Vercel']
   },
-  {
+ 
+   {
     id: 4,
-    title: '4 In One',
-    img: '4in1-3.png',
-    github: 'https://github.com/KoradaSaiSurya/Bharathone.git', 
-    // github: 'https://github.com/KoradaSaiSurya/Bharathone-backend.git',
-    live: 'https://bharathone.vercel.app',
-    tags: ['React', 'Responsive', 'Vercel']
+    title: 'Interior Design',
+    img: 'interior.webp',
+    github: 'https://github.com/KoradaSaiSurya/luxeSpaces.git',
+    live: 'https://luxe-spaces.vercel.app/',
+    tags: ['LocalStorage', 'React', 'CRUD']
   },
   {
     id: 5,
