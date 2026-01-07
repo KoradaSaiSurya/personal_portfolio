@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const projectsData = [
   {
     id: 1,
-    title: 'Gayathri School',
+    title: 'Sri Gayathri School',
     img: 'school-3d.png',
     github: 'https://github.com/KoradaSaiSurya/gayatri-website',
     live: 'https://gayatri-website.vercel.app',
@@ -12,7 +12,7 @@ const projectsData = [
   },
    {
     id: 2,
-    title: '4 In One',
+    title: 'BharathOne',
     img: '4in1-3.png',
     github: 'https://github.com/KoradaSaiSurya/Bharathone.git', 
     // github: 'https://github.com/KoradaSaiSurya/Bharathone-backend.git',
